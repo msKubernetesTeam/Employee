@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: employee-springboot
+  name: employee-springboot-deployment
 spec:
   replicas: 3
   selector:
@@ -13,8 +13,8 @@ spec:
         app: employee-springboot
     spec:
       containers:
-        - name: springboot
-          image: sujith2897/employee-springboot:employee-springboot
+        - name: employee-springboot
+          image: sujith2897/springbootdocker1
           ports:
             - containerPort: 8083
           env:
