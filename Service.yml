@@ -9,4 +9,3 @@ spec:
       targetPort: 8080
   selector:
     app: employee-springboot
-© 2022 GitHub, Inc.
