@@ -1,39 +1,20 @@
 apiVersion: apps/v1
-
 kind: Deployment
-
 metadata:
-
-name: employee-springboot-deployment
-
+  name: emplopyee-springboot-deployment
 spec:
-
-replicas: 1
-
-selector:
-
-matchLabels:
-
-app: employee-springboot
-
-template:
-
-metadata:
-
-labels:
-
-app: employee-springboot
-
-spec:
-
-containers:
-
-- name: employee-springboot-deployment
-
-image: sujith2897/springbootdocker1
-
-imagePullPolicy: Always
-
-ports:
-
-- containerPort: 8080
+  replicas: 1
+  selector:
+    matchLabels:
+      app: emplopyee-springboot
+  template:
+    metadata:
+      labels:
+        app: emplopyee-springboot
+    spec:
+      containers:
+      - name: emplopyee-springboot-deployment
+        image: sujith2897/springbootdocker1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
