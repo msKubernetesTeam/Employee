@@ -1,11 +1,23 @@
 apiVersion: v1
+
 kind: Service
+
 metadata:
-  name: employee-springboot
+
+name: employee-springbootapp
+
 spec:
-  type: LoadBalancer
-  ports:
-    - port: 8083
-      targetPort: 8083
-  selector:
-    app: employee-springboot
+
+selector:
+
+app: employee-springboot
+
+ports:
+
+- protocol: TCP
+
+port: 8080
+
+targetPort: 8080
+
+type: LoadBalancer
