@@ -1,23 +1,20 @@
-apiVersion: v1
-
-kind: Service
-
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-
-name: employee-springbootapp
-
+  name: emplopyee-springboot-deployment
 spec:
-
-selector:
-
-app: employee-springboot
-
-ports:
-
-- protocol: TCP
-
-port: 8080
-
-targetPort: 8080
-
-type: LoadBalancer
+  replicas: 1
+  selector:
+    matchLabels:
+      app: emplopyee-springboot
+  template:
+    metadata:
+      labels:
+        app: emplopyee-springboot
+    spec:
+      containers:
+      - name: emplopyee-springboot-deployment
+        image: sujith2897/springbootdocker1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
