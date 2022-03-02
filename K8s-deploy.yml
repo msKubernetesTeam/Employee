@@ -1,22 +1,39 @@
 apiVersion: apps/v1
+
 kind: Deployment
+
 metadata:
-  name: employee-springboot-deployment
+
+name: employee-springboot-deployment
+
 spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: employee-springboot
-  template:
-    metadata:
-      labels:
-        app: employee-springboot
-    spec:
-      containers:
-        - name: employee-springboot
-          image: sujith2897/springbootdocker1
-          ports:
-            - containerPort: 8083
-          env:
-            - name: PORT
-              value: "8083"
+
+replicas: 1
+
+selector:
+
+matchLabels:
+
+app: employee-springboot
+
+template:
+
+metadata:
+
+labels:
+
+app: employee-springboot
+
+spec:
+
+containers:
+
+- name: employee-springboot-deployment
+
+image: sujith2897/springbootdocker1
+
+imagePullPolicy: Always
+
+ports:
+
+- containerPort: 8080
