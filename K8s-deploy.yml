@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: emplopyee-springboot-deployment
-        image: sujith2897/springbootdocker1
+        image: jenie779/employee-springboot:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
